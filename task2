@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float num1,num2;
+    char operation;
+     cout<<"\n\t\t\t--------  SIMPLE CALCULATOR PROGRAM  --------   \n\n";
+     cout<<"Choose the operation you want ( '+' , '-' , '*' , '/' ) : \n ";
+     cin>>operation;
+     cout<<"Enter two numbers to perform the operation \n ";
+     cin>>num1>>num2;
+     cout<<endl;
+     switch (operation)
+     {
+     case '+' :
+        cout<<"\t\t"<<num1<<" + "<<num2<<" = "<<num1+num2<<endl;
+        break;
+     case '-' :
+         cout<<"\t\t"<<num1<<" - "<<num2<<" = "<<num1-num2<<endl;
+        break;
+     case '*' :
+        cout<<"\t\t"<<num1<<" * "<<num2<<" = "<<num1*num2<<endl;
+        break;
+     case '/' :
+         if(num2==0)
+         {
+            cout<<"Can't divide by 0 "<<endl;
+            return 0;
+         }
+         else
+        cout<<"\t\t"<<num1<<" / "<<num2<<" = "<<num1/num2<<endl;
+        break;
+     default :
+     cout<<"check your entries and try again"<<endl;
+     }
+    return 0;
+}
